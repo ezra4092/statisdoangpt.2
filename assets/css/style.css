@@ -454,16 +454,26 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     -o-transition:.3s linear;
     transition: .3s linear;
 }
-.single-explore-img{position:relative;overflow: hidden;}
-.single-explore-img:before {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(162,172,177,.2);
+
+
+.single-explore-img {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Lebar tetap 100% */
+    height: 200px; /* Tentukan tinggi yang seragam untuk semua card */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa; /* Tambahkan background agar gambar kecil tetap terlihat */
 }
+
+.single-explore-img img {
+    max-width: 100%; /* Jangan lebih besar dari container */
+    max-height: 100%; /* Jangan lebih besar dari tinggi yang ditentukan */
+    object-fit: contain; /* Pastikan gambar tetap dalam ukuran aslinya tanpa diperbesar */
+} */
+
+
 .single-explore-img-info {
     position: absolute;
     bottom:-20px;
