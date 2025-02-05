@@ -263,7 +263,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .welcome-hero-txt { padding-top: 155px;}
 
 .welcome-hero-txt h2 {
-    font-size: 48px;
+    font-size: 60px;
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
@@ -271,7 +271,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     line-height: 1.4;
 }
 .welcome-hero-txt p {
-    font-size: 18px;
+    font-size: 24px;
     color: #fcfcfc;
     margin-top: 25px;
 }
