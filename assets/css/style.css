@@ -375,9 +375,19 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 .single-list-topics-content:hover h2>a,.single-list-topics-content:hover p{color: #fff!important;}
 .single-list-topics-content:hover{
     color: #fff;
-    background:#ff545a;
+    background:#ff9554;
     box-shadow: 0 5px 10px rgba(71,71,71,.4);
 }
+
+.agung {
+    color: black; /* Warna teks default */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+.agung:hover {
+    color: orange; /* Warna teks saat hover */
+}
+
 
 /*-------------------------------------
         6. Works 
@@ -910,7 +920,7 @@ ul{
 	color: #24262b;
 	text-decoration: none;
 	font-weight: 400;
-	color: #f8fafb;
+	color: #24262b;
 	display: block;
 	transition: all 0.3s ease;
 }
