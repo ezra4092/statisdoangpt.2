@@ -227,6 +227,7 @@ nav.navbar.bootsnav ul.nav > li.dropdown span {
 }
 /*.menu-ui-design*/
 
+
 /*.navbar-toggle */
 nav.navbar.bootsnav .navbar-toggle {
     position: relative;
@@ -380,14 +381,15 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 }
 
 .agung {
-    color: black; /* Warna teks default */
+    color: white; /* Warna teks default */
     text-decoration: none; /* Menghilangkan garis bawah */
 }
 
 .agung:hover {
-    color: orange; /* Warna teks saat hover */
+    color: orange;
+    background-color: white;
+    
 }
-
 
 /*-------------------------------------
         6. Works 
@@ -607,7 +609,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 
 /*single-testimonial-box */
 .single-testimonial-box  {
-    padding: 50px 30px;
+    padding: 25px;
     box-shadow: 0 0px 5px rgba(71,71,71,.2); 
     overflow-x:hidden;
     -webkit-transition: .3s; 
