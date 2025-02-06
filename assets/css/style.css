@@ -628,7 +628,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
     -moz-transition:.3s; 
     -ms-transition:.3s; 
     -o-transition:.3s;
-    transition: .3s;
+    transition: .2s;
 }
 .testimonial-person {
     margin-left: 15px;
@@ -854,65 +854,124 @@ nav.navbar.bootsnav .navbar-toggle i{color: #ff545a;}
 /*-------------------------------------
         12. Footer
 --------------------------------------*/
-.footer-menu {padding: 45px 0;}
-.footer-menu .navbar-header{padding:0;}
-.footer-menu .navbar-header a.navbar-brand,.footer-menu.footer-menu .navbar-header a.navbar-brand:hover,.footer-menu .navbar-header a.navbar-brand:focus{
-    padding:0;
-    height: 0;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
 }
-.footer-menu ul.footer-menu-item{text-align: right;}
-.footer-menu ul.footer-menu-item li{display: inline-block;}
-.footer-menu ul.footer-menu-item li a {
-    color: #859098;
-    font-size: 14px;
-    text-transform: uppercase;
-    padding-left: 40px;
-    -webkit-transition:0.3s linear;
-    -moz-transition:0.3s linear;
-    -o-transition:0.3s linear;
-    transition:0.3s linear;
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
 }
-.footer-menu ul.footer-menu-item li a:hover{color: #f43032;}
-.hm-footer-copyright {
-    padding: 40px 0;
-    border-top: 1px solid #e1e5eb;
+.container{
+	max-width: 1170px;
+	margin:auto;
 }
-.hm-footer-copyright p,.hm-footer-copyright p a {
-    color: #a5adb3;
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: capitalize;
+.row{
+	display: flex;
+	flex-wrap: wrap;
 }
-.footer-social {text-align: right;}
-.footer-social .fa-phone:before {
-    position: relative;
-    top: 2px;
+ul{
+	list-style: none;
 }
-.footer-social a ,.footer-social span {
-    display: inline-block;
-    color: #afb4bf;
-    font-size: 14px;
-    margin-left: 15px;
-    -webkit-transition: .3s; 
-    -moz-transition:.3s; 
-    -ms-transition:.3s; 
-    -o-transition:.3s;
-    transition: .3s;
+.footer{
+	background-color: #f8fafb;
+    padding: 70px 0;
 }
-.footer-social a {
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    background: #eef2f6;
-    text-align: center;
-    border-radius: 50%;
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
 }
-.footer-social span {margin-right:15px;margin-left: 0;color: #a5adb3;}
-.footer-social span:hover{color: #ff545a;}
-.footer-social a:hover {background:#ff545a;color: #fff;}
+.footer-col h4{
+	font-size: 18px;
+	color:rgb(0, 0, 0);
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #24262b;
+	text-decoration: none;
+	font-weight: 400;
+	color: #f8fafb;
+	display: block;
+	transition: all 0.3s ease;
+}
 
+.footer-col ul li a:hover{
+	color:rgb(0, 0, 0);
+	/* padding-left: 8px; */
+}
+.footer-col ul li{
+	color: #24262b;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color:rgb(255, 255, 255);
+	transition: all 0.5s ease;
+}
+
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.facebook {
+    background-color: #1877F2;
+}
+
+.twitter {
+    background-color: #000;
+}
+
+.instagram {
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+}
+
+.youtube {
+    background-color: #FF0000;
+}
+
+/* Efek Hover */
+a:hover {
+    opacity: 0.7;
+}
 /*===============================
-    Scroll Top
+    Scroll Top  ff545a
 ===============================*/
 #scroll-Top  .return-to-top {
     position: fixed;
