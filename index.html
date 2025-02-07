@@ -65,7 +65,9 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary p-4">
       <div class="container">
         <div class="navbar-header">
-          <a href="index.html" class="agung mb-1"><img src="/assets/images/welcome-hero/yayasan.png" alt="Logo" width="50" height="500" class="d-inline-block" /> <strong class="text-dark" style="font-size: large">Yayasan Wahana Prestasi Prima</strong></a>
+          <a href="index.html" class="agung mb-1"
+            ><img src="/assets/images/welcome-hero/yayasan.png" alt="Logo" width="50" height="500" class="d-inline-block" /> <strong class="text-dark" style="font-size: large">Yayasan Wahana Prestasi Prima</strong></a
+          >
         </div>
         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -90,8 +92,7 @@
       <div class="container">
         <div class="welcome-hero-txt">
           <h2>
-            best place to find and explore <br />
-            that all you need
+            career expo & jobfair 2025
           </h2>
           <p>Find the best job opportunities, companies, and career options with just one click.</p>
         </div>
@@ -108,7 +109,7 @@
             <li>
               <div class="single-list-topics-content">
                 <div class="single-list-topics-icon">
-                  <i class="fas fa-users" style="font-size: 35px;"></i>
+                  <i class="fas fa-users" style="font-size: 35px"></i>
                 </div>
                 <h2><a href="#">Murid SMK</a></h2>
                 <div class="counter">1015</div>
@@ -117,25 +118,25 @@
             <li>
               <div class="single-list-topics-content">
                 <div class="single-list-topics-icon">
-                  <i class="fas fa-school" style="font-size: 35px;"></i>
+                  <i class="fas fa-school" style="font-size: 35px"></i>
                 </div>
-                <h2><a href="#">Perusahaan</a></h2>
+                <h2><a href="#explore">Perusahaan</a></h2>
                 <div class="counter">10</div>
               </div>
             </li>
             <li>
               <div class="single-list-topics-content">
                 <div class="single-list-topics-icon">
-                  <i class="fa-solid fa-graduation-cap" style="font-size: 35px;"></i>
+                  <i class="fa-solid fa-graduation-cap" style="font-size: 35px"></i>
                 </div>
-                <h2><a href="#" >Universitas</a></h2>
+                <h2><a href="#">Universitas</a></h2>
                 <div class="counter">108</div>
               </div>
             </li>
             <li>
               <div class="single-list-topics-content">
                 <div class="single-list-topics-icon">
-                  <i class="fas fa-users" style="font-size: 35px;"></i>
+                  <i class="fas fa-users" style="font-size: 35px"></i>
                 </div>
                 <h2><a href="#">Murid SMA</a></h2>
                 <div class="counter">1426</div>
@@ -426,11 +427,11 @@
               Alamat : Jl. Pantai Indah Kapuk Boulevard No.1, RT.6/RW.2, Kamal Muara, Kec. Penjaringan, Jakarta Utara, Daerah Khusus Ibukota Jakarta. Kode Pos 14470
             </h2>
             <br />
-            <a href="" class="text-primary">Register Now!</a>
+            <!-- <a href="" class="text-primary">Register Now!</a> -->
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+          <div class="modal-footer d-flex justify-content-between">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#indomaretForm">Lamar Sekarang</button>
           </div>
         </div>
       </div>
@@ -712,6 +713,54 @@
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form Modal -->
+    <div class="modal fade" id="indomaretForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Formulir PT. Indomarco Prismata (Indo Group)</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="mb-3">
+                <label class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" name="nama_paket" placeholder="Nama Lengkap" />
+              </div>
+              <div class="mb-3">
+                <div class="form-label">Kelas</div>
+                <select class="form-select" name="jenis">
+                  <option value="kiloan">Kiloan</option>
+                  <option value="selimut">Selimut</option>
+                  <option value="bed_cover">Bed Cover</option>
+                  <option value="kaos">Kaos</option>
+                  <option value="lain">Lain-lain</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Posisi yang ingin dilamar</label>
+                <select class="form-select" name="posisi">
+                  <option value="Admin">Admin</option>
+                  <option value="Desain Grafis">Desain Grafis</option>
+                  <option value="Barista">Barista</option>
+                  <option value="Baker">Baker</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="formFile" class="small mb-1">CV</label>
+                <input class="form-control" name="dokumen" type="file" id="dokumen" required />
+                <div style="color: red; font-size: 10px">*ukuran file tidak boleh lebih dari 3mb</div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+              <button type="button" class="btn btn-primary">Kirim</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
