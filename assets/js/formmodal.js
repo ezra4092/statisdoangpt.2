@@ -6,6 +6,7 @@ function openIndomaretForm() {
     firstModal.addEventListener('hidden.bs.modal', function() {
       const secondModal = new bootstrap.Modal('#indomaretForm');
       secondModal.show();
+    }, {once: true});
   }
 function openAdvanForm() {
     const firstModal = document.getElementById('advanModal');
