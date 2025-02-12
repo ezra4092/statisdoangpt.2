@@ -1,51 +1,75 @@
-document.getElementById("jobApplicationForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // Mencegah form reload
+// Fungsi untuk setup event listener pada form dengan ID tertentu
+function setupFormSubmission(formId) {
+  const formElement = document.getElementById(formId);
+  formElement.addEventListener("submit", function (e) {
+    e.preventDefault(); // Mencegah reload halaman
 
-  const form = e.target;
-  const nama = form.nama.value;
-  const kelas = form.kelas.value;
-  const posisi = form.posisi.value;
-  const dokumen = form.dokumen.files[0];
+    const form = e.target;
+    const nama = form.nama.value;
+    const kelas = form.kelas.value;
+    const posisi = form.posisi.value;
+    const dokumenFile = form.dokumen.files[0];
+    const perusahaan = form.perusahaan.value; // Nilai hidden input perusahaan
 
-  if (!dokumen || dokumen.size > 3 * 1024 * 1024) {
-    alert("Ukuran file tidak boleh lebih dari 3MB");
-    return;
-  }
+    if (!dokumenFile || dokumenFile.size > 3 * 1024 * 1024) {
+      alert("Ukuran file tidak boleh lebih dari 3MB");
+      return;
+    }
 
-  const reader = new FileReader();
-  reader.onload = function () {
-    const base64File = reader.result.split(",")[1];
+    const reader = new FileReader();
+    reader.onload = function () {
+      const base64File = reader.result.split(",")[1];
 
-    fetch(
-      "https://script.google.com/macros/s/AKfycbxBldGrS5xtCKQ66xY5ZS6kQmpYb18kk_0iUDN1HSyBwhLHYREyKTLLMYMVLKrkm2BAcA/exec",
-      {
-        // Ganti dengan URL Web App kamu
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams({
-          nama: nama,
-          kelas: kelas,
-          posisi: posisi,
-          dokumen: base64File,
-        }),
-      }
-    )
-      .then((response) => response.text())
-      .then((result) => {
-        alert("Data berhasil dikirim!");
-        form.reset(); // Reset form setelah submit berhasil
-        const modal = bootstrap.Modal.getInstance(
-          document.getElementById("indomaretForm")
-        );
-        modal.hide(); // Tutup modal setelah form dikirim
+      fetch(
+        "https://script.google.com/macros/s/AKfycbxlYMNbCRr2-d3cy6t0c_WmwE56bZXrBIxFMcn1KKI-focPZBxaSoxFr3FBws8uT2Bedw/exec",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams({
+            nama: nama,
+            kelas: kelas,
+            posisi: posisi,
+            dokumen: base64File,
+            perusahaan: perusahaan,
+          }),
+        }
+      )
+        .then((response) => response.text())
+        .then(result => {
+        Swal.fire({
+          title: 'Berhasil!',
+          text: result,
+          icon: 'success',
+          confirmButtonText: 'OK'
+        });
+        form.reset();
+        const modalInstance = bootstrap.Modal.getInstance(form.closest('.modal'));
+        if (modalInstance) modalInstance.hide();
       })
-      .catch((error) => {
+      .catch(error => {
         console.error("Error:", error);
-        alert("Terjadi kesalahan saat mengirim data.");
+        Swal.fire({
+          title: 'Error',
+          text: "Terjadi kesalahan saat mengirim data.",
+          icon: 'error',
+          confirmButtonText: 'OK'
+        });
       });
-  };
+    };
 
-  reader.readAsDataURL(dokumen);
-});
+    reader.readAsDataURL(dokumenFile);
+  });
+}
+
+// Setup event listener untuk masing-masing form
+setupFormSubmission("jobApplicationFormIndomaret");
+setupFormSubmission("jobApplicationFormAdvan");
+setupFormSubmission("jobApplicationFormPharos")
+setupFormSubmission("jobApplicationFormTridaya");
+setupFormSubmission("jobApplicationFormIndopsiko");
+setupFormSubmission("jobApplicationFormPpkd");
+setupFormSubmission("jobApplicationFormAnteraja");
+setupFormSubmission("jobApplicationFormSigma");
+setupFormSubmission("jobApplicationFormVillamerah");
+setupFormSubmission("jobApplicationFormSutindo");
+// Tambahkan pemanggilan setupFormSubmission untuk form lainnya sesuai ID-nya
