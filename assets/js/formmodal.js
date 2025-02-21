@@ -4,7 +4,7 @@ function openIndomaretForm() {
     modalInstance.hide();
   
     firstModal.addEventListener('hidden.bs.modal', function() {
-      const secondModal = new bootstrap.Modal('#indomaretForm');
+      const secondModal = new bootstrap.Modal('#indomaretForm', { backdrop: 'static' });
       secondModal.show();
     }, {once: true});
   }
@@ -14,7 +14,7 @@ function openAdvanForm() {
     modalInstance.hide();
   
     firstModal.addEventListener('hidden.bs.modal', function() {
-      const secondModal = new bootstrap.Modal('#advanForm');
+      const secondModal = new bootstrap.Modal('#advanForm', { backdrop: 'static' });
       secondModal.show();
     }, {once: true});
   }
@@ -24,7 +24,7 @@ function openAdvanForm() {
     modalInstance.hide();
   
     firstModal.addEventListener('hidden.bs.modal', function() {
-      const secondModal = new bootstrap.Modal('#pharosForm');
+      const secondModal = new bootstrap.Modal('#pharosForm', { backdrop: 'static' });
       secondModal.show();
     }, {once: true});
   }
@@ -34,7 +34,7 @@ function openAdvanForm() {
     modalInstance.hide();
   
     firstModal.addEventListener('hidden.bs.modal', function() {
-      const secondModal = new bootstrap.Modal('#tridayaForm');
+      const secondModal = new bootstrap.Modal('#tridayaForm', { backdrop: 'static' });
       secondModal.show();
     }, {once: true});
   }
@@ -44,7 +44,7 @@ function openAdvanForm() {
     modalInstance.hide();
   
     firstModal.addEventListener('hidden.bs.modal', function() {
-      const secondModal = new bootstrap.Modal('#indopsikoForm');
+      const secondModal = new bootstrap.Modal('#indopsikoForm', { backdrop: 'static' });
       secondModal.show();
     }, {once: true});
   }
@@ -54,7 +54,7 @@ function openAdvanForm() {
     modalInstance.hide();
   
     firstModal.addEventListener('hidden.bs.modal', function() {
-      const secondModal = new bootstrap.Modal('#pkkdForm');
+      const secondModal = new bootstrap.Modal('#pkkdForm', { backdrop: 'static' });
       secondModal.show();
     }, {once: true});
   }
@@ -64,7 +64,7 @@ function openAdvanForm() {
     modalInstance.hide();
   
     firstModal.addEventListener('hidden.bs.modal', function() {
-      const secondModal = new bootstrap.Modal('#triadiForm');
+      const secondModal = new bootstrap.Modal('#triadiForm', { backdrop: 'static' });
       secondModal.show();
     }, {once: true});
   }
@@ -74,7 +74,7 @@ function openAdvanForm() {
     modalInstance.hide();
   
     firstModal.addEventListener('hidden.bs.modal', function() {
-      const secondModal = new bootstrap.Modal('#sigmaForm');
+      const secondModal = new bootstrap.Modal('#sigmaForm', { backdrop: 'static' });
       secondModal.show();
     }, {once: true});
   }
@@ -84,7 +84,17 @@ function openAdvanForm() {
     modalInstance.hide();
   
     firstModal.addEventListener('hidden.bs.modal', function() {
-      const secondModal = new bootstrap.Modal('#villaMerahForm');
+      const secondModal = new bootstrap.Modal('#villaMerahForm', { backdrop: 'static' });
+      secondModal.show();
+    }, {once: true});
+  }
+  function openIotaForm() {
+    const firstModal = document.getElementById('IotaModal');
+    const modalInstance = bootstrap.Modal.getInstance(firstModal);
+    modalInstance.hide();
+  
+    firstModal.addEventListener('hidden.bs.modal', function() {
+      const secondModal = new bootstrap.Modal('#IotaForm', { backdrop: 'static' });
       secondModal.show();
     }, {once: true});
   }
@@ -94,7 +104,7 @@ function openAdvanForm() {
     modalInstance.hide();
   
     firstModal.addEventListener('hidden.bs.modal', function() {
-      const secondModal = new bootstrap.Modal('#sutindoForm');
+      const secondModal = new bootstrap.Modal('#sutindoForm', { backdrop: 'static' });
       secondModal.show();
     }, {once: true});
   }
