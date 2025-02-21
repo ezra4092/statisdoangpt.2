@@ -21,7 +21,7 @@ function setupFormSubmission(formId) {
       const base64File = reader.result.split(",")[1];
 
       fetch(
-        "https://script.google.com/macros/s/AKfycbxlYMNbCRr2-d3cy6t0c_WmwE56bZXrBIxFMcn1KKI-focPZBxaSoxFr3FBws8uT2Bedw/exec",
+        "https://script.google.com/macros/s/AKfycbxOdiX5romT9lS2g9qyln4Jrqek5IX2NzkepWXf6ebZhclmqihDijokJcFpRD0jxfKyfA/exec",
         {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -71,5 +71,6 @@ setupFormSubmission("jobApplicationFormPpkd");
 setupFormSubmission("jobApplicationFormAnteraja");
 setupFormSubmission("jobApplicationFormSigma");
 setupFormSubmission("jobApplicationFormVillamerah");
+setupFormSubmission("jobApplicationFormIota");
 setupFormSubmission("jobApplicationFormSutindo");
 // Tambahkan pemanggilan setupFormSubmission untuk form lainnya sesuai ID-nya
